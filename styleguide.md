@@ -5,18 +5,24 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 ####Doctype
 For simplicity and maximum compatibility, use the HTML5 doctype.  This tag is REQUIRED.
-    <!DOCTYPE html>
+```html
+<!DOCTYPE html>
+`
 
 ####Charset
 Make sure your text editor is using UTF-8 as the character encoding.  Do not use a byte order mark (BOM).
 Specify the character set in HTML documents using the charset meta tag.  This tag is REQUIRED.
-    <meta charset="utf-8">
+```html
+<meta charset="utf-8">
+`
 
 ####Formatting
 
 #####Indentation
 Indent each new line by 2 spaces.  The author MUST NOT mix tabs and spaces.
+```html
     <ul>
       <li>Foo</li>
       <li>Bar</li>
     </ul>
+`
