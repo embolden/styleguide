@@ -2,21 +2,20 @@
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](http://www.ietf.org/rfc/rfc2119.txt).
 
 Adapted from:
-https://github.com/styleguide
-http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml
-http://codex.wordpress.org/WordPress_Coding_Standards
+- https://github.com/styleguide
+- http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml
+- http://codex.wordpress.org/WordPress_Coding_Standards
 
 ##HTML
 ####Doctype
-For simplicity and maximum compatibility, use the HTML5 doctype.  This tag is REQUIRED.
+The author MUST use the HTML5 doctype.  This ensures maximum accessibility, compatibility, support, and simplicity.
 ```html
 <!DOCTYPE html>
 ```
 
 
-####Charset
-Make sure your text editor is using UTF-8 as the character encoding.  Do not use a byte order mark (BOM).
-Specify the character set in HTML documents using the charset meta tag.  This tag is REQUIRED.
+####Encoding
+The author MUST declare a character set for a document.  The RECOMMENDED encoding method is UTF-8.  The author SHOULD use the HTML5 meta tag.  Make sure that the chosen editor is using the UTF-8 without a byte order mark (BOM).
 ```html
 <meta charset="utf-8">
 ```
@@ -24,7 +23,7 @@ Specify the character set in HTML documents using the charset meta tag.  This ta
 
 ####Formatting
 #####New Lines and Indentation
-Use a new line for every block level element.  Indent each new line by 2 spaces.  The author MUST NOT mix tabs and spaces.
+The author MUST use a new line for every block line.  Each nested element MUST be indented 2 spaces.  The author MUST NOT mix tabs and spaces.
 ```html
 <blockquote>
   <p><em>Lorem</em> ipsum dolor sit amet.</p>
@@ -32,14 +31,14 @@ Use a new line for every block level element.  Indent each new line by 2 spaces.
 ```
 
 #####Capitalization
-Use only lowercase in element names, attributes, attribute values, selectors, properties, and property values.  The only exception to this is text or strings.
+The author MUST use only lowercase letters for element names, attributes, attribute values, selectors, properties, and property values.  The only exception to this is text or strings.
 ```html
 <img src="foo.png" alt="Bar">
 ```
 
 #####Attributes
-For HTML attribute values Use double quotes ("") instead of single quotes ('').
-Omit `type` attributes from style sheet and script declarations.
+The author MUST use double quotes ("") instead of single quotes ('') for HTML attributes.
+The author MUST omit `type` attributes from style sheet and script declarations.
 ```html
 <link rel="stylesheet" href="foo.css">
 ```
@@ -50,25 +49,28 @@ Omit `type` attributes from style sheet and script declarations.
 
 ####Accessibility
 #####Alt attribute
-Use meaningful alternate text on all non-decorative images, videos, and animated `canvas` objects.
+The author MUST use meaningful alternate text on all non-decorative images, videos, and animated `canvas` objects.
 ```html
 <img src="logo.png" alt="Foo Bar Incorporated">
 ```
 
 
+
 ##CSS
 ###ID attribute
-Avoid using ID attributes as CSS selectors.
+The author SHOULD avoid using ID attributes as CSS selectors.
+
 
 ###Shorthand
-Use shorthand properties whenever possible.
+The author SHOULD use shorthand properties whenever available.
 ```css
 h1{
   font: 1.5em/1.2 Helvetica, Arial, sans-serif;
 }
 ```
 
-Use 3 character hexadecimal notation whenever possible.
+
+The author SHOULD use 3 character hexadecimal notation whenever possible.
 ```css
 body {
   color: #F00;
@@ -77,26 +79,28 @@ body {
 
 
 ###Zero value unit
-Omit unit specification after "0" values unless required.
+The author SHOULD omit unit specification after "0" values.
 ```css
 .foo {
   margin: 0;
 }
 ```
 
+
 ###Line-height
-Do not specify a unit when declaring line height.
+The author SHOULD NOT specify a measurement unit when declaring line height.
 ```css
 h2 {
   line-height: 1.2;
 }
 ```
 
+
 ###Formatting
-Use a semicolon after every property declaration.
-Use a space after every property name's colon.
-Start a new line for each selector and declaration.
-Leave a blank line between blocks of rules.
+The author MUST use a semicolon after every property declaration.
+The author MUST use a space after every property name's colon.
+The author MUST start a new line for each selector and declaration.
+The author MUST leave a blank line between blocks of rules.
 ```css
 .foo,
 .bar {
